@@ -1,0 +1,70 @@
+$primary-color: #FFEE60;
+$text-color: #333333;
+$secondary-text-color: #666666;
+$border-color: #FFFFFF;
+$background-color: #EEEEEE;
+.productList {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  margin-right: 15%;
+  margin-left: 15%;
+}
+
+.product {
+  display: flex;
+  align-items: flex-start; /* Alinea los elementos al inicio del contenedor */
+  background-color: #FFFFFF;
+  padding: 10px;
+  position: relative;
+  border: 1px solid $border-color;
+  margin-bottom: 20px;
+}
+
+.productImageContainer {
+  position: relative;
+}
+
+.productImage {
+  display: block;
+  width: 180px; /* Fija un ancho */
+  height: 180px; /* Fija un alto */
+}
+
+.productDetails {
+  display: flex; /* Usa flexbox */
+  flex-direction: column; /* Apila los elementos verticalmente */
+  justify-content: center; /* Centra los elementos verticalmente */
+  margin-right: 20px; /* Añade un margen a la derecha */
+}
+
+.priceTag {
+  grid-column: 2;
+  grid-row: 1;
+  font-size: 18px;
+  color: $text-color;
+  font-weight: bold;
+  margin: 0;
+  margin-bottom: 32px;
+  margin-top: 16px;
+  margin-left: 16px;
+}
+.pdescripcion {
+  grid-column: 2;
+  grid-row: 1;
+  font-size: 18px;
+  color: $text-color;
+  margin: 0;
+  margin-left: 16px;
+}
+.plocation {
+  font-size: 12px; /* Tamaño más pequeño para la ubicación */
+  color: $text-color; /* Color del texto */
+  margin-left: auto; /* Alinea al inicio horizontalmente */
+  white-space: nowrap;
+}
+@media (max-width: 768px) {
+  .productList {
+    align-items: center;
+  }
+}

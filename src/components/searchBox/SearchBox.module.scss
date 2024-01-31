@@ -1,0 +1,45 @@
+
+$primary-color: #FFE600;
+$secondary-color: #333;
+
+@mixin search-button {
+  border: none;
+  cursor: pointer;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $primary-color;
+  padding: 1rem;
+
+  .logo img {
+    width: inherit;
+  }
+
+  .searchbar {
+    display: flex;
+    align-items: center;
+    width: 600px;
+    input[type="search"] {
+      padding: 0.5rem;
+      margin-left: 1rem;
+      border: none;
+      border-radius: 2px;
+      width: inherit;
+      outline: none;
+    }
+
+    button {
+      height: 31.5px;
+      background-color: white;
+      @include search-button;
+      img {
+        width: inherit;
+        margin-top: 4px;
+      }
+
+    }
+  }
+}
