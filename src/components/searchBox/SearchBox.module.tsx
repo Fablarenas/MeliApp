@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import styles from './SearchBox.module.scss';
 import logo from '../../assets/images/Logo_ML.png';
 import iconoSearch from '../../assets/images/ic_Search.png';
@@ -9,11 +10,14 @@ interface SearchBoxProps {
 
 const SearchBox: React.FC<SearchBoxProps> = ({ onSearch }) => {
   const [query, setQuery] = useState('');
+  const navigate = useNavigate();
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     console.log('Form submitted with query:', query);
     onSearch(query);
+    navigate('/');
+    setQuery('');
   };
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {

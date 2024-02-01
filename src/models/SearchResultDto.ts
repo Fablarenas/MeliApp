@@ -1,6 +1,7 @@
 export interface SearchResultDto {
     author: Author;
     items: SearchResult[];
+    categories:string[]
   }
   export interface SearchResult {
     id: string;

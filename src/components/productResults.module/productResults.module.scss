@@ -7,18 +7,22 @@ $background-color: #EEEEEE;
   display: flex;
   flex-direction: column;
   padding: 20px;
-  margin-right: 15%;
-  margin-left: 15%;
+  margin-right: 25%;
+  margin-left: 25%;
+
 }
 
 .product {
   display: flex;
-  align-items: flex-start; /* Alinea los elementos al inicio del contenedor */
+  align-items: flex-start;
   background-color: #FFFFFF;
   padding: 10px;
   position: relative;
   border: 1px solid $border-color;
   margin-bottom: 20px;
+  &:hover {
+    background-color: #EDEDED;
+  }
 }
 
 .productImageContainer {
@@ -67,4 +71,8 @@ $background-color: #EEEEEE;
   .productList {
     align-items: center;
   }
+}
+.productLink {
+  text-decoration: none;
+  // otras reglas de estilo para productLink
 }
